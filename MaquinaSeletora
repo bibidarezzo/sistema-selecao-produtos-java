@@ -1,0 +1,55 @@
+```java
+import javax.swing.JOptionPane;
+
+/*
+ * Projeto inspirado em máquinas de venda automática (vending machines),
+ * onde o usuário escolhe um produto através de um menu numérico.
+ *
+ * Objetivo do projeto:
+ * Praticar conceitos básicos de Java, principalmente:
+ * - Vetores (Arrays)
+ * - Entrada de dados
+ * - Conversão de valores
+ * - Interface gráfica simples com JOptionPane
+ *
+ * Tecnologias utilizadas:
+ * - Java
+ * - JOptionPane (Swing)
+ *
+ * Desenvolvedora: Gabriela Darezzo Gomes
+ */
+
+public class MaquinaSeletora {
+
+    public static void main(String[] args) {
+
+        // Vetor com os produtos disponíveis
+        String[] menu = {
+            "1 - Coca-Cola",
+            "2 - Café Expresso",
+            "3 - Sprite",
+            "4 - Bis"
+        };
+
+        // Exibe o menu de opções
+        JOptionPane.showMessageDialog(
+            null,
+            "Opções:\n\n" + String.join("\n", menu)
+        );
+
+        // Recebe a opção escolhida pelo usuário
+        String escolha = JOptionPane.showInputDialog(
+            "Número da opção:"
+        );
+
+        // Converte a resposta para número inteiro
+        int escolhaInteiro = Integer.parseInt(escolha);
+
+        // Exibe o produto selecionado
+        JOptionPane.showMessageDialog(
+            null,
+            "Produto selecionado:\n" + menu[escolhaInteiro - 1]
+        );
+    }
+}
+```
